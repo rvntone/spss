@@ -60,7 +60,7 @@ class MachineFloatingPointTest
 
         foreach ( $expected as $key => $value ) {
             $expected = 0;
-            $actual = bcsub( $value, $read->{$key} );
+            $actual = \bcsub( $value, $read->{$key} );
             $mesg = "Wrong value received for '$key', expected '$value', got '{$read->{$key}}'";
 
             $this->assertEquals( $expected, $actual, $mesg );
